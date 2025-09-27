@@ -1,0 +1,46 @@
+{
+  "name": "geo-lint",
+  "version": "0.0.2",
+  "description": "Fast, zero-dependency GPS point validation + path metrics for ride-hailing and tracking apps.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm,cjs --clean",
+    "test": "vitest run",
+    "dev": "vitest",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.1",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stdSheraz/geo-lint.git"
+  },
+  "keywords": [
+    "gps",
+    "validation",
+    "haversine",
+    "geospatial",
+    "ride-hailing",
+    "maps",
+    "distance"
+  ],
+  "author": "Open Source Contributors",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stdSheraz/geo-lint/issues"
+  },
+  "homepage": "https://github.com/stdSheraz/geo-lint#readme"
+}
